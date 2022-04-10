@@ -73,7 +73,8 @@ h3,
 h4,
 h5 {
   color: var(--clr-primary-2);
-  line-height: 1;
+  font-size: var(--fs-400);
+  line-height: 1.5;
 }
 
 img {
@@ -114,15 +115,14 @@ Card
   font-weight: 500;
   box-shadow: var(--shadow-4);
   border-radius: var(--radius);
-  
 }
 .card-header {
   display: -webkit-box;
   display: flex;
   gap: 1rem;
   -webkit-box-align: center;
-          align-items: center;
-  margin-bottom: .5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
 }
 .img-container {
   border-radius: 50%;
@@ -144,7 +144,6 @@ Card
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.2;
-  
 }
 .quotation {
   color: var(--clr-white);
@@ -166,7 +165,9 @@ Card
 .card-3 {
   background-color: var(--clr-white);
 }
-.card-3 p {
+.card-3 :nth-child(1),
+.card-3 :nth-child(2), 
+.card-3 :nth-child(3) {
   color: var(--clr-primary-2);
 }
 .card-3 .quotation {
@@ -178,11 +179,13 @@ Card
 .card-5 {
   background-color: var(--clr-white);
 }
-.card-5 p {
-  color: var(--clr-primary-3);
+.card-5 :nth-child(1),
+.card-5 :nth-child(2), 
+.card-5 :nth-child(3) {
+  color: var(--clr-primary-2);
 }
 .attribution {
-  padding: .5rem;
+  padding: 0.5rem;
   font-size: 11px;
   text-align: center;
 }
@@ -195,7 +198,7 @@ Media Query
 ===============
 */
 @media screen and (min-width: 75rem) {
-  .single-card{
+  .single-card {
     margin: 0;
   }
   .main-text {
@@ -216,7 +219,7 @@ Media Query
   .card-1 {
     grid-area: a;
   }
-  .card-2{
+  .card-2 {
     grid-area: b;
   }
   .card-3 {
@@ -228,9 +231,8 @@ Media Query
   .card-5 {
     grid-area: c;
   }
-  .attribution{
+  .attribution {
     grid-area: f;
     margin: 0 auto;
   }
 }
-
