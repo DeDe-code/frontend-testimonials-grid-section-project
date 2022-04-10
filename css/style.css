@@ -166,7 +166,7 @@ Card
   background-color: var(--clr-white);
 }
 .card-3 :nth-child(1),
-.card-3 :nth-child(2), 
+.card-3 :nth-child(2),
 .card-3 :nth-child(3) {
   color: var(--clr-primary-2);
 }
@@ -180,13 +180,13 @@ Card
   background-color: var(--clr-white);
 }
 .card-5 :nth-child(1),
-.card-5 :nth-child(2), 
+.card-5 :nth-child(2),
 .card-5 :nth-child(3) {
   color: var(--clr-primary-2);
 }
 .attribution {
   padding: 0.5rem;
-  font-size: 11px;
+  font-size: 0.6875rem;
   text-align: center;
 }
 .attribution a {
@@ -197,17 +197,51 @@ Card
 Media Query
 ===============
 */
-@media screen and (min-width: 75rem) {
-  .single-card {
+@media screen and (min-width: 62rem) {
+  .section-center {
+    max-width: 40.75rem;
+    display: grid;
+    grid-template-columns: 20.3125rem 20.3125rem;
+    gap: 1rem;
+    grid-template-areas:
+      "a b"
+      "a c"
+      "d e"
+      "d e"
+      "f f";
+  }
+  .card-1 {
+    grid-area: a;
+  }
+  .card-2 {
+    grid-area: b;
+  }
+  .card-3 {
+    grid-area: c;
+  }
+  .card-4 {
+    grid-area: d;
+  }
+  .card-5 {
+    grid-area: e;
+  }
+  .attribution {
+    grid-area: f;
+    margin: 0 auto;
+  }
+  .single-card, .name {
     margin: 0;
   }
+  }
+  
+
+@media screen and (min-width: 75rem) {
   .main-text {
     font-size: 1.29rem;
   }
   .section-center {
     max-width: 75rem;
     padding: 2rem;
-    display: grid;
     grid-template-columns: repeat(4, 16.5rem);
     grid-template-rows: 18.75rem 18.75rem 3rem;
     gap: 1.5rem;
